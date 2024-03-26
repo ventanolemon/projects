@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="jmakolka">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>350</y>
+      <width>261</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 0);
+color: rgb(170, 0, 255);</string>
+    </property>
+    <property name="text">
+     <string>ВЕСЕЛАЯ
+ ЖМАКОЛКА</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="menu_text">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>35</y>
+      <width>670</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>66</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>ГЛАВНОЕ МЕНЮ</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="risovalka">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>350</y>
+      <width>261</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 0);
+color: rgb(255, 125, 32);</string>
+    </property>
+    <property name="text">
+     <string>ВЕСЕЛАЯ
+ РИСОВАКА</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="perepoloh">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>350</y>
+      <width>261</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 0);
+color: rgb(0, 85, 255);</string>
+    </property>
+    <property name="text">
+     <string>ПЧЕЛИНЫЙ
+ ПЕРЕПОЛОХ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="more_games">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>580</y>
+      <width>261</width>
+      <height>110</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 0);
+color: rgb(255, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Больше игр</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1280</width>
+      <height>720</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>background_for_menu.png</pixmap>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>jmakolka</zorder>
+   <zorder>menu_text</zorder>
+   <zorder>risovalka</zorder>
+   <zorder>perepoloh</zorder>
+   <zorder>more_games</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

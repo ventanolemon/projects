@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="all_games_text">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>0</y>
+      <width>431</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>66</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 0, 255);</string>
+    </property>
+    <property name="text">
+     <string>ВСЕ ИГРЫ</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="risovalka">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>200</y>
+      <width>261</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 0);
+color: rgb(255, 170, 0);</string>
+    </property>
+    <property name="text">
+     <string>ВЕСЕЛАЯ
+ РИСОВАКА</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="perepoloh">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>200</y>
+      <width>261</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 0);
+color: rgb(0, 85, 255);</string>
+    </property>
+    <property name="text">
+     <string>ПЧЕЛИНЫЙ
+ ПЕРЕПОЛОХ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="jmakolka">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>200</y>
+      <width>261</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 0);
+color: rgb(170, 0, 255);</string>
+    </property>
+    <property name="text">
+     <string>ВЕСЕЛАЯ
+ ЖМАКОЛКА</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="photo_hunt">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>440</y>
+      <width>261</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 0);
+color: rgb(170, 0, 255);</string>
+    </property>
+    <property name="text">
+     <string>ФОТООХОТА</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="evolution">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>440</y>
+      <width>261</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 0);
+color: rgb(255, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>ЭВОЛЮЦИЯ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="back">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>111</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Upheaval Pro</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 170, 255);</string>
+    </property>
+    <property name="text">
+     <string>НАЗАД</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1280</width>
+      <height>720</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>background_for_menu.png</pixmap>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>all_games_text</zorder>
+   <zorder>risovalka</zorder>
+   <zorder>perepoloh</zorder>
+   <zorder>jmakolka</zorder>
+   <zorder>photo_hunt</zorder>
+   <zorder>evolution</zorder>
+   <zorder>back</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
