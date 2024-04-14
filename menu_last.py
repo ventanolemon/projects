@@ -8,6 +8,7 @@ from flappy import FlappyMainWindow
 from jmakolka_last import JmakolkaMainWindow
 from risovalka import RisovalkaMainWindow
 from Evolution import EvolutionMainRun, WINDOW
+import subprocess
 
 
 class Main_Menu(QMainWindow):
@@ -66,8 +67,7 @@ class All_Games(QMainWindow):
         self.jmakolka.clicked.connect(self.open_jmak)
         self.risovalka.clicked.connect(self.open_ris)
         self.evolution.clicked.connect(open_vadimky) # self.open_vadimk
-        self.photo_hunt.clicked.connect(lambda x: print('фотоохота'))
-
+        self.photo_hunt.clicked.connect(self.open_photo)
 
     def back_to_menu(self):
         if not self.menu_window:
@@ -89,6 +89,8 @@ class All_Games(QMainWindow):
         self.bird = FlappyMainWindow()
         self.bird.show()
 
+    def open_photo(self):
+        subprocess.run(["python", "files/photo_hunt/duck_hunt.py"])
 
 def open_vadimky():
     EvolutionMainRun(WINDOW)
