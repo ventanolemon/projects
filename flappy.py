@@ -7,20 +7,20 @@ import numpy as np
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1280, 731)
-        MainWindow.setStyleSheet("background: url(:/images/fon1.png) no-repeat center fixed;")
+        MainWindow.resize(1920, 1080)
+        MainWindow.setStyleSheet("background-image: url('files/perepoloh/sky_background.png') no-repeat center fixed;")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.vinni = QtWidgets.QFrame(self.centralwidget)
         self.vinni.setGeometry(QtCore.QRect(10, 260, 101, 250))
-        self.vinni.setStyleSheet("background: url(:/images/vinni200.png);\n"
+        self.vinni.setStyleSheet("background-image: url('files/perepoloh/vinnipuh.jpg');\n"
                                  "border: 0px solid;")
         self.vinni.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.vinni.setFrameShadow(QtWidgets.QFrame.Raised)
         self.vinni.setObjectName("vinni")
         self.bees = QtWidgets.QFrame(self.centralwidget)
         self.bees.setGeometry(QtCore.QRect(1110, 300, 120, 91))
-        self.bees.setStyleSheet("background: url(:/images/bees120.png);\n"
+        self.bees.setStyleSheet("background-image: url('files/perepoloh/bees.jpg');\n"
                                 "border: 0px solid;")
         self.bees.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.bees.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -40,7 +40,7 @@ class FlappyMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         print('l')
-        self.arduino = serial.Serial('COM3', 9600)  # замените 'COM3' на имя порта вашего Arduino
+        self.arduino = serial.Serial('COM4', 9600)  #% замените 'COM3' на имя порта вашего Arduino
         # self.arduino = 50
         print(self.arduino)
         self.score = 0
@@ -128,9 +128,9 @@ class FlappyMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         y = np.array([self.window_upper_bound, self.window_lower_bound + 125, self.window_lower_bound])
         new_y = np.interp(distance, x, y)
         print('000')
-        self.vinni.setGeometry(QtCore.QRect(10, new_y, 101, 250))
+        self.vinni.setGeometry(QtCore.QRect(10, int(new_y), 101, 250))
         self.check_collision()
-        print('000')
+        print('200')
 
 
     def check_collision(self):
