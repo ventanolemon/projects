@@ -13,14 +13,14 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.vinni = QtWidgets.QFrame(self.centralwidget)
         self.vinni.setGeometry(QtCore.QRect(10, 260, 101, 250))
-        self.vinni.setStyleSheet("background-image: url('files/perepoloh/vinnipuh.jpg');\n"
+        self.vinni.setStyleSheet("background-image: url('files/perepoloh/vinnipuh.png');\n"
                                  "border: 0px solid;")
         self.vinni.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.vinni.setFrameShadow(QtWidgets.QFrame.Raised)
         self.vinni.setObjectName("vinni")
         self.bees = QtWidgets.QFrame(self.centralwidget)
         self.bees.setGeometry(QtCore.QRect(1110, 300, 120, 91))
-        self.bees.setStyleSheet("background-image: url('files/perepoloh/bees.jpg');\n"
+        self.bees.setStyleSheet("background-image: url('files/perepoloh/bees.png');\n"
                                 "border: 0px solid;")
         self.bees.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.bees.setFrameShadow(QtWidgets.QFrame.Raised)

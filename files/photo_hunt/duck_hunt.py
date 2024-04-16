@@ -261,8 +261,8 @@ def shot(score):
     camera_sound.play()
 
     fill()
-    if ((animal.duck_rect.collidepoint(event.pos) and ((not (535 < animal.duck_rect.y < 900)) or
-            ((535 < animal.duck_rect.y < 900) and not (480 < animal.duck_rect.x < 860))) and
+    if ((animal.duck_rect.collidepoint(event.pos) and ((not (535 < animal.duck_rect.y < 765)) or
+            ((535 < animal.duck_rect.y < 765) and not (480 < animal.duck_rect.x < 860))) and
             (not (cloud.cloud_rect.x - 40 < animal.duck_rect.x < cloud.cloud_rect.x + 285) or
             (not (cloud.cloud_rect.y - 100 < animal.duck_rect.y < cloud.cloud_rect.y + 280))) and
             (not (630 < animal.duck_rect.y < 764) or not (1141 < animal.duck_rect.x < 1569)))):
@@ -280,8 +280,8 @@ def fill():
 
     duck_rect_copy = animal.duck_rect.copy()
 
-    if ((not (535 < animal.duck_rect.y < 900)) or
-        ((535 < animal.duck_rect.y < 900) and not (480 < animal.duck_rect.x < 860))) and \
+    if ((not (535 < animal.duck_rect.y < 765)) or
+        ((535 < animal.duck_rect.y < 765) and not (480 < animal.duck_rect.x < 860))) and \
         (not (cloud.cloud_rect.x - 40 < animal.duck_rect.x < cloud.cloud_rect.x + 285) or \
         (not (cloud.cloud_rect.y - 100 < animal.duck_rect.y < cloud.cloud_rect.y + 280))) and \
         (not (630 < animal.duck_rect.y < 764) or not (1141 < animal.duck_rect.x < 1569)):
