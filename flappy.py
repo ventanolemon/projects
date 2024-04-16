@@ -39,10 +39,10 @@ class FlappyMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        print('l')
+        # print('l')
         self.arduino = serial.Serial('COM4', 9600)  #% замените 'COM3' на имя порта вашего Arduino
         # self.arduino = 50
-        print(self.arduino)
+        # print(self.arduino)
         self.score = 0
         self.score_label = QtWidgets.QLabel(self.centralwidget)
         self.score_label.setGeometry(QtCore.QRect(600, 10, 100, 20))
@@ -67,9 +67,9 @@ class FlappyMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.init_events()
 
     def init_events(self):
-        print('k')
+        # print('k')
         self.pause_button.clicked.connect(self.toggle_game_pause)
-        print('h')
+        # print('h')
         self.bees_spawn_timer.timeout.connect(self.spawn_bees)
         self.bees_spawn_timer.start(50)
 
@@ -122,22 +122,22 @@ class FlappyMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
       #  self.check_collision()
 
     def move_vinni(self, distance):
-        print('k')
+        # print('k')
         distance = max(min(distance, 30), 1)
         x = np.array([1, 15, 30])
         y = np.array([self.window_upper_bound, self.window_lower_bound + 125, self.window_lower_bound])
         new_y = np.interp(distance, x, y)
-        print('000')
+        # print('000')
         self.vinni.setGeometry(QtCore.QRect(10, int(new_y), 101, 250))
         self.check_collision()
-        print('200')
+        # print('200')
 
 
     def check_collision(self):
-        print(888)
+        # print(888)
         vinni_rect = self.vinni.geometry()
         bees_rect = self.bees.geometry()
-        print(888)
+        # print(888)
 
         if vinni_rect.intersects(bees_rect) or self.is_vinni_out_of_bounds():
             self.game_over()
