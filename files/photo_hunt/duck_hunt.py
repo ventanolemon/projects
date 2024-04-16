@@ -1,6 +1,37 @@
 import pygame
 import random
 import os
+import websocket
+import threading
+import time
+
+def on_message(ws, message):
+    # print(message)
+    # Обработка полученного сообщения
+    print("Received:", message[:-1])
+    shot(score, color=message[:-2])
+    # Здесь можно разобрать строку и обновить логику Pygame
+
+def on_error(ws, error):
+    print(error)
+
+def on_close(ws):
+    print("### closed ###")
+
+def on_open(ws):
+    print("WS connection opened")
+
+def run(*args):
+    ws.run_forever()
+
+ws = websocket.WebSocketApp("ws://192.168.94.19:81/",
+                          on_message=on_message,
+                          on_error=on_error,
+                          on_close=on_close)
+ws.on_open = on_open
+
+wst = threading.Thread(target=run)
+wst.start()
 
 pygame.init()
 
@@ -257,15 +288,19 @@ def place():
             animal.duck_rect.y = random.randint(700, screen_height - 200)
 
 
-def shot(score):
+def shot(score, color=(0, 0, 0)):
     camera_sound.play()
 
     fill()
-    if ((animal.duck_rect.collidepoint(event.pos) and ((not (535 < animal.duck_rect.y < 765)) or
+    if (((animal.duck_rect.collidepoint(event.pos)) and ((not (535 < animal.duck_rect.y < 765)) or
             ((535 < animal.duck_rect.y < 765) and not (480 < animal.duck_rect.x < 860))) and
             (not (cloud.cloud_rect.x - 40 < animal.duck_rect.x < cloud.cloud_rect.x + 285) or
             (not (cloud.cloud_rect.y - 100 < animal.duck_rect.y < cloud.cloud_rect.y + 280))) and
-            (not (630 < animal.duck_rect.y < 764) or not (1141 < animal.duck_rect.x < 1569)))):
+            (not (630 < animal.duck_rect.y < 764) or not (1141 < animal.duck_rect.x < 1569)))) or color in ['2,1,1',
+                                                                                                            '3,1,1',
+                                                                                                            '5,7,6',
+                                                                                                            '5,5,4',
+                                                                                                            '0,0,0']:
         photo = Photo()
         photo.run()
         place()
