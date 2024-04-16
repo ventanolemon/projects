@@ -40,14 +40,10 @@ class Main_Menu(QMainWindow):
         self.hide()
         self.all_games.show()
 
-    '''def open_vadimky(self):
-        EvolutionMainRun(WINDOW)'''
-
     def open_jmak(self):
         self.jm = JmakolkaMainWindow()
         self.jm.show()
         # self.hide1()
-
     def open_ris(self):
         self.risov = RisovalkaMainWindow()
         self.risov.show()
@@ -66,7 +62,7 @@ class All_Games(QMainWindow):
         self.perepoloh.clicked.connect(self.open_pchel)
         self.jmakolka.clicked.connect(self.open_jmak)
         self.risovalka.clicked.connect(self.open_ris)
-        self.evolution.clicked.connect(open_vadimky) # self.open_vadimk
+        self.evolution.clicked.connect(self.open_vadimky) # self.open_vadimk
         self.photo_hunt.clicked.connect(self.open_photo)
 
     def back_to_menu(self):
@@ -92,8 +88,8 @@ class All_Games(QMainWindow):
     def open_photo(self):
         subprocess.run(["python", "files/photo_hunt/duck_hunt.py"])
 
-def open_vadimky():
-    EvolutionMainRun(WINDOW)
+    def open_vadimky(self):
+        subprocess.run(["python", "Evolution.py"])
 
 
 if __name__ == '__main__':
