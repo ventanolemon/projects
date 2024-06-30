@@ -60,7 +60,7 @@ color: rgb(255, 170, 0);</string>
     </property>
     <property name="text">
      <string>ВЕСЕЛАЯ
- РИСОВАКА</string>
+ РИСОВАЛКА</string>
     </property>
    </widget>
    <widget class="QPushButton" name="perepoloh">

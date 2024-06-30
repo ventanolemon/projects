@@ -5,10 +5,13 @@ import websocket
 import threading
 import time
 
+
+score = 0
 def on_message(ws, message):
+    global score
     # print(message)
     # Обработка полученного сообщения
-    print("Received:", message[:-1])
+    print("Received:", message[:-2])
     shot(score, color=message[:-2])
     # Здесь можно разобрать строку и обновить логику Pygame
 
@@ -59,8 +62,6 @@ pygame.display.set_caption("Фотоохота")
 white = (255, 255, 255)
 black = (0, 0, 0)
 yellow = (234, 255, 0)
-
-score = 0
 
 
 class Duck:
@@ -288,7 +289,7 @@ def place():
             animal.duck_rect.y = random.randint(700, screen_height - 200)
 
 
-def shot(score, color=(0, 0, 0)):
+def shot(scor, color=(0, 0, 0)):
     camera_sound.play()
 
     fill()
@@ -301,11 +302,18 @@ def shot(score, color=(0, 0, 0)):
                                                                                                             '5,7,6',
                                                                                                             '5,5,4',
                                                                                                             '0,0,0']:
-        photo = Photo()
-        photo.run()
+        ''' in ['2,1,1',
+                                                                                                            '3,1,1',
+                                                                                                            '5,7,6',
+                                                                                                            '5,5,4',
+                                                                                                            '0,0,0']'''
+        '''photo = Photo()
+        photo.run()'''
         place()
+        global score
         score += 1
-    return animal.duck_rect.x, score
+        scor += 1
+    return animal.duck_rect.x, scor
 
 
 def fill():

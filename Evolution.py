@@ -23,7 +23,7 @@ MOVE_VEL = 20
 
 WINDOW = pygame.display.set_mode((500, 300))
 print(type(WINDOW))
-pygame.display.set_caption("2048")
+pygame.display.set_caption("Evolution")
 
 all_sprites = pygame.sprite.Group()
 
@@ -391,18 +391,25 @@ def EvolutionMainRun(window):
                 can_move = ''
                 try:
                     perev = {1073741913: pygame.K_LEFT, 1073741914: pygame.K_RIGHT, 1073741915: pygame.K_UP,
-                             1073741916: pygame.K_DOWN}
+                             1073741916: pygame.K_DOWN, 49: pygame.K_LEFT, 51: pygame.K_UP,
+                             52: pygame.K_DOWN}
+                    perv_2 = {}
+
                     comand = perev[event.key]
+                    print(event.key, comand, pygame.K_LEFT)
                 except Exception:
                     comand = pygame.key
-                # print(comand)
-                if event.key == comand or event.key == pygame.K_LEFT:  # pygame.K_LEFT
+                    print(event.key, 'g')
+                #print(comand)
+                if event.key == 1073741913 or event.key == pygame.K_LEFT:  # pygame.K_LEFT
                     can_move = move_tiles(window, tiles, clock, "left")
+                else:
+                    print(event.key == comand, event.key == pygame.K_LEFT)
                 if event.key == pygame.K_RIGHT or event.key == comand:  # 1073741914
                     can_move = move_tiles(window, tiles, clock, "right")
-                if event.key == comand or event.key == pygame.K_UP:  # pygame.K_UP
+                if event.key == 1073741915 or event.key == pygame.K_UP:  # pygame.K_UP
                     can_move = move_tiles(window, tiles, clock, "up")
-                if event.key == comand or event.key == pygame.K_DOWN:  # pygame.K_DOWN
+                if event.key == 1073741916 or event.key == pygame.K_DOWN:  # pygame.K_DOWN
                     can_move = move_tiles(window, tiles, clock, "down")
                 # print(event.key)
                 if can_move == 'lost':

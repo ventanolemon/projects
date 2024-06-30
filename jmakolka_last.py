@@ -104,7 +104,8 @@ class JmakolkaMainWindow(QMainWindow, Ui_Happy_Jmakolka):
 
             other_tales = random.choices(options, k=1)
 
-            combination = [''.join(random.choices(['1', '2', '3', '4'], k=3)) for _ in range(2)]
+            # combination = [''.join(random.choices(['1', '2', '3', '4'], k=3)) for _ in range(2)]
+            combination = [''.join(random.choices(['1', '3', '4'], k=3)) for _ in range(2)]
             self.pob_comb = random.choice(combination)
             combination.remove(self.pob_comb)
 
